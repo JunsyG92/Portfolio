@@ -1,0 +1,19 @@
+._title {
+	text-transform: uppercase;
+	font-weight: 300;
+	white-space: nowrap;
+	font-family: "Fjalla One", sans-serif !important;
+}
+._title.big {
+	font-size: 6rem;
+	line-height: 6rem;
+}
+._title.medium {
+	font-size: 3.5rem;
+	line-height: 4.5rem;
+	color: rgb(180, 180, 180);
+}
+._title.small {
+	line-height: 3rem;
+	font-size: 1.5rem;
+}
