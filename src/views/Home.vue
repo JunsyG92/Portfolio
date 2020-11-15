@@ -3,7 +3,7 @@
 		<v-row>
 			<v-col cols="4" class="mx-auto">
 				<p class="_title small">What's up ?</p>
-				<h1 class="_title big _neon _blue">Hi ! I'm Mathieu,<br /></h1>
+				<h1 class="_title big _neon _blue">I'm Mathieu N.<br /></h1>
 				<h2 class="_title medium">Developper web full-stack</h2>
 			</v-col>
 		</v-row>
