@@ -6,12 +6,17 @@ import Work from "../views/Work";
 import Contact from "../views/Contact";
 import Admin from "../views/Admin";
 import Login from "../views/Login";
+import NotFound from "../views/NotFound";
 
 import axios from "axios";
 
 Vue.use(VueRouter);
 
 const routes = [
+	{
+		path: "*",
+		component: NotFound,
+	},
 	{
 		path: "/",
 		name: "Home",
