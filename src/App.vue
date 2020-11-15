@@ -55,14 +55,13 @@ h6 {
 	/* src: url("./assets/fonts/Heavitas.ttf"); */
 }
 
-.v-application.v-application--is-ltr.theme--light {
-	color: white !important;
+.theme--dark.v-application {
 	min-height: 100%;
 	/* background: rgba(50,50,58,1); */
-	background: #251b2e;
-	background: -moz-linear-gradient(top, #251b2e 0%, #06001e 100%);
-	background: -webkit-linear-gradient(top, #251b2e 0%, #06001e 100%);
-	background: linear-gradient(to bottom, #251b2e 0%, #06001e 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251b2e', endColorstr='#06001e',GradientType=0 );
+	background: #251b2e !important;
+	background: -moz-linear-gradient(top, #251b2e 0%, #06001e 100%) !important;
+	background: -webkit-linear-gradient(top, #251b2e 0%, #06001e 100%) !important;
+	background: linear-gradient(to bottom, #251b2e 0%, #06001e 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251b2e', endColorstr='#06001e',GradientType=0 ) !important;
 }
 </style>
