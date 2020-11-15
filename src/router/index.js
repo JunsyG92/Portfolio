@@ -4,6 +4,10 @@ import Home from "../views/Home";
 import About from "../views/About";
 import Work from "../views/Work";
 import Contact from "../views/Contact";
+import Admin from "../views/Admin";
+import Login from "../views/Login";
+
+import axios from "axios";
 
 Vue.use(VueRouter);
 
@@ -28,8 +32,53 @@ const routes = [
 		name: "Contact",
 		component: Contact,
 	},
+	{
+		path: "/admin",
+		name: "AdminPanel",
+		component: Admin,
+		beforeEnter(route, redirect, next) {
+			axios
+				.get("https://api.ipify.org/?format=json")
+				.then((res) => {
+					let token = localStorage.getItem("token");
+					let allIpsEnv = process.env.VUE_APP_IP_ADDRESS;
+					const ipArray = allIpsEnv.split(", ");
+					const ipExist = ipArray.find((ips) => ips == res.data.ip);
+					if (ipExist) {
+						!token ? next({ name: "AdminLogin" }) : next();
+					} else {
+						next({ name: "Home" });
+					}
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		},
+	},
+	{
+		path: "/admin/login",
+		name: "AdminLogin",
+		component: Login,
+		beforeEnter(route, redirect, next) {
+			axios
+				.get("https://api.ipify.org/?format=json")
+				.then((res) => {
+					let token = localStorage.getItem("token");
+					let allIpsEnv = process.env.VUE_APP_IP_ADDRESS;
+					const ipArray = allIpsEnv.split(", ");
+					const ipExist = ipArray.find((ips) => ips == res.data.ip);
+					if (ipExist) {
+						token ? next({ name: "AdminPanel" }) : next();
+					} else {
+						next({ name: "Home" });
+					}
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		},
+	},
 ];
-
 const router = new VueRouter({
 	mode: "history",
 	base: process.env.BASE_URL,
