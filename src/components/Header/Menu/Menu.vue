@@ -1,14 +1,15 @@
 <template>
-	<div>
-		<div class="position-fixed w-100 mt-5">
-			<ul class="nav justify-center d-flex">
-				<NavLink to_link="/" name="Home" />
-				<NavLink to_link="/about" name="About" />
-				<NavLink to_link="/work" name="Work" />
-				<NavLink to_link="/contact" name="Contact" />
+	<header class="position-fixed h-100 d-flex align-center">
+		<div class="nav-menu-app w-100">
+			<ul class="nav d-flex flex-column ">
+				<NavLink to_link="home" name="Home" />
+				<NavLink to_link="about" name="About" />
+				<NavLink to_link="skills" name="Skills" />
+				<NavLink to_link="work" name="Work" />
+				<NavLink to_link="contact" name="Contact" />
 			</ul>
 		</div>
-	</div>
+	</header>
 </template>
 
 <script>
@@ -24,4 +25,11 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+header {
+	z-index: 10;
+}
+.nav-menu-app {
+	z-index: 10;
+}
+</style>
