@@ -1,0 +1,17 @@
+.container-fill-height {
+	display: table;
+	width: 100%;
+	height: 100vh;
+}
+.container-fill-height .fp-tableCell {
+	display: table-cell;
+	vertical-align: middle;
+}
+// .container-fill-height .fp-tableCell .container-content-bottom,
+.container-fill-height .container-middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+.container-fill-height .fp-tableCell .container-content-bottom {
+	vertical-align: bottom;
+}
