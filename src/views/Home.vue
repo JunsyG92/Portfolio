@@ -1,23 +1,40 @@
 <template>
-	<v-container class="home d-flex align-center h-100">
-		<v-row>
-			<v-col cols="4" class="mx-auto">
-				<p class="_title small">What's up ?</p>
-				<h1 class="_title big _neon _blue">I'm Mathieu N.<br /></h1>
-				<h2 class="_title medium">Developper web full-stack</h2>
-			</v-col>
-		</v-row>
-		<ScrollDown />
-	</v-container>
+	<full-page :options="options" id="fullpage">
+		<v-container fluid>
+			<Intro />
+			<About />
+			<Skills />
+			<Work />
+			<Contact />
+		</v-container>
+	</full-page>
 </template>
 
 <script>
-// @ is an alias to /src
-import ScrollDown from "../components/Intro/ScrollDown";
+// import section
+import About from "../components/About/About";
+import Intro from "../components/Intro/Intro";
+import Work from "../components/Work/Work";
+import Contact from "../components/Contact/Contact";
+import Skills from "../components/Skills/Skills";
+
 export default {
 	name: "Home",
 	components: {
-		ScrollDown,
+		About,
+		Intro,
+		Work,
+		Contact,
+		Skills,
+	},
+	data() {
+		return {
+			options: {
+				licenseKey: "3936F101-C8A74F32-80C3B0D1-4BA92E67",
+				// menu: "#menu",
+				anchors: ["home", "about", "skills", "work", "contact"],
+			},
+		};
 	},
 };
 </script>
