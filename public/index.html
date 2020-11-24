@@ -5,36 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-		<!-- Font style 1 -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Font style 2 -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Font style 3 -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Font style 4 -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Font style 5 -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Font style 6 -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap"
-			rel="stylesheet"
-		/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
 			rel="stylesheet"
@@ -44,10 +14,20 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
 		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
 		/>
+		<script src="https://cdn.tutorialjinni.com/granim/2.0.0/granim.js"></script>
+		<script
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDfBqa6Of9AYohPuBW9ulQ1UcRfY6Y0zE&callback=initMap"
+		></script>
 	</head>
 	<body>
 		<noscript>
@@ -57,7 +37,21 @@
 				continue.</strong
 			>
 		</noscript>
+		<canvas
+			id="granim-canvas"
+			style="
+              position: absolute;
+              display: block;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            "
+		></canvas>
 		<div id="app"></div>
 		<!-- built files will be auto injected -->
+		<script src="index.js"></script>
 	</body>
 </html>
