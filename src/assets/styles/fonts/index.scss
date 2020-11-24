@@ -13,7 +13,83 @@
 	line-height: 4.5rem;
 	color: rgb(180, 180, 180);
 }
+._title.medium_white {
+	font-size: 3.5rem;
+	line-height: 4.5rem;
+	color: rgb(255, 255, 255);
+}
 ._title.small {
 	line-height: 3rem;
 	font-size: 1.5rem;
+}
+
+p {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 19px;
+}
+
+.link {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #828282;
+	text-decoration: none;
+	transition: 300ms;
+
+	&:focus,
+	&:hover {
+		color: #c6e2ff;
+		text-shadow: 0 0 1px rgba(202, 228, 225, 0.92),
+			0 0 5px rgba(202, 228, 225, 0.34), 0 0 2px rgba(31, 213, 226, 0.52),
+			0 0 3.5px rgba(54, 216, 228, 0.92), 0 0 5.5px rgba(72, 216, 226, 0.78),
+			0 0 8px rgba(107, 218, 224, 92);
+		transition: 300ms;
+	}
+}
+
+@keyframes neonblue {
+	from {
+		text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+			0 0 15px rgba(202, 228, 225, 0.34), 0 0 6px rgba(31, 213, 226, 0.52),
+			0 0 10.5px rgba(54, 216, 228, 0.92), 0 0 17px rgba(72, 216, 226, 0.78),
+			0 0 27px rgba(107, 218, 224, 0.92);
+	}
+	to {
+		text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+			0 0 15px rgba(202, 228, 225, 0.42), 0 0 6px rgba(31, 213, 226, 0.58),
+			0 0 11px rgba(54, 216, 228, 0.84), 0 0 19px rgba(72, 216, 226, 0.88),
+			0 0 30px rgba(107, 218, 224, 1);
+	}
+}
+@keyframes neonblockblue {
+	from {
+		box-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+			0 0 15px rgba(202, 228, 225, 0.34), 0 0 6px rgba(31, 213, 226, 0.52),
+			0 0 10.5px rgba(54, 216, 228, 0.92), 0 0 17px rgba(72, 216, 226, 0.78),
+			0 0 27px rgba(107, 218, 224, 0.92);
+	}
+	to {
+		box-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+			0 0 15px rgba(202, 228, 225, 0.42), 0 0 6px rgba(31, 213, 226, 0.58),
+			0 0 11px rgba(54, 216, 228, 0.84), 0 0 19px rgba(72, 216, 226, 0.88),
+			0 0 30px rgba(107, 218, 224, 1);
+	}
+}
+
+.sign {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&__word_blue {
+		text-align: center;
+		color: #c6e2ff;
+		animation: neonblue 0.13s ease-in-out infinite alternate;
+	}
+
+	&__block_blue:hover {
+		text-align: center;
+		color: #c6e2ff;
+		animation: neonblockblue 0.13s ease-in-out infinite alternate;
+	}
 }
