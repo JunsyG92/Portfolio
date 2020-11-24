@@ -1,6 +1,6 @@
 <template>
 	<div class="scoll-container">
-		<a class="scroll down animate" href="#!" alt=""> </a>
+		<a class="scroll down animate" href="#about" alt=""> </a>
 	</div>
 </template>
 
@@ -10,14 +10,15 @@ export default {};
 
 <style lang="scss">
 .scoll-container {
-	position: absolute;
+	position: relative;
 	display: block;
-	height: 100%;
+	height: 70px;
 	left: 50%;
+	top: 220px;
 }
 .scroll {
 	position: absolute;
-	bottom: 30px;
+	top: 14%;
 	width: 40px;
 	height: 70px;
 	border: 1px solid #fff;
