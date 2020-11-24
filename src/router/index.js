@@ -1,9 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home";
-import About from "../views/About";
-import Work from "../views/Work";
-import Contact from "../views/Contact";
+import Project from "../views/Project";
 import Admin from "../views/Admin";
 import Login from "../views/Login";
 import NotFound from "../views/NotFound";
@@ -23,19 +21,9 @@ const routes = [
 		component: Home,
 	},
 	{
-		path: "/about",
-		name: "About",
-		component: About,
-	},
-	{
-		path: "/work",
-		name: "Work",
-		component: Work,
-	},
-	{
-		path: "/contact",
-		name: "Contact",
-		component: Contact,
+		path: "/work/",
+		name: "Project",
+		component: Project,
 	},
 	{
 		path: "/admin",
@@ -50,7 +38,7 @@ const routes = [
 					const ipArray = allIpsEnv.split(", ");
 					const ipExist = ipArray.find((ips) => ips == res.data.ip);
 					if (ipExist) {
-						!token ? next({ name: "AdminLogin" }) : next();
+						!token ? next({ path: "/admin/login" }) : next();
 					} else {
 						next({ name: "Home" });
 					}
