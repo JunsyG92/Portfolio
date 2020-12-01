@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+@import "https://unpkg.com/fullpage.js/dist/fullpage.min.css";
 @import "./container/index.scss";
 @import "./colors/index.scss";
 @import "./balise/index.scss";
@@ -7,3 +9,97 @@
 @import "./position/index.scss";
 @import "./shadow/index.scss";
 @import "./size/index.scss";
+
+#section0 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#c8c8c8),
+		to(#ffffff)
+	);
+	background: -webkit-linear-gradient(#c8c8c8, #ffffff);
+	background: linear-gradient(#c8c8c8 0%, #ffffff 100%);
+}
+
+#section1 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#ffffff),
+		to(#c8c8c8)
+	);
+	background: -webkit-linear-gradient(#ffffff, #c8c8c8);
+	background: linear-gradient(#ffffff, #c8c8c8);
+}
+
+#section2 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#c8c8c8),
+		to(#ffffff)
+	);
+	background: -webkit-linear-gradient(#c8c8c8, #ffffff);
+	background: linear-gradient(#c8c8c8 0%, #ffffff 100%);
+}
+
+#section3 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#ffffff),
+		to(#c8c8c8)
+	);
+	background: -webkit-linear-gradient(#ffffff, #c8c8c8);
+	background: linear-gradient(#ffffff, #c8c8c8);
+}
+
+#section4 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#c8c8c8),
+		to(#ffffff)
+	);
+	background: -webkit-linear-gradient(#c8c8c8, #ffffff);
+	background: linear-gradient(#c8c8c8 0%, #ffffff 100%);
+}
+#profil0 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#424242),
+		to(#101010)
+	);
+	background: -webkit-linear-gradient(#424242, #101010);
+	background: linear-gradient(#424242 0%, #101010 100%);
+}
+
+#profil1 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#101010),
+		to(#424242)
+	);
+	background: -webkit-linear-gradient(#101010, #424242);
+	background: linear-gradient(#101010 0%, #424242 100%);
+}
+#profil2 {
+	background: -webkit-gradient(
+		linear,
+		top left,
+		bottom left,
+		from(#424242),
+		to(#101010)
+	);
+	background: -webkit-linear-gradient(#424242, #101010);
+	background: linear-gradient(#424242 0%, #101010 100%);
+}
