@@ -1,53 +1,65 @@
 <template>
-	<div class="container-fill-height section">
-		<div class="container-middle d-block content__skills">
-			<v-row>
-				<v-col cols="12" class="mt-8">
-					<h2 class="_title medium mb-5">
-						<span class="sign__word_blue">Skills</span>
-					</h2>
-					<p class="text-uppercase">
-						Click on one of the tabs to see a quick overview of my skills on the
-						technologies I use every day.
-					</p>
-					<v-tabs background-color="transparent" class="mb-8">
-						<FrontEnd />
-						<BackEnd />
-						<SQL />
-						<Adobe />
-						<Tools />
-						<NoCode />
-						<CMS />
-					</v-tabs>
-					<div class="d-flex justify-center">
-						<div class="mx-auto">
-							<Chart
-								:chartData="chartData"
-								:options="charOptions"
-								label="Test de vue-chartjs"
-							/>
-						</div>
-					</div>
-				</v-col>
-			</v-row>
+	<div class="container-fill-height section" id="section2">
+		<div class="container-middle d-block content__skills ">
+			<div class="slide text-center" data-anchor="skill">
+				<h2 class="_title big  grey--text text--darken-2">My skills</h2>
+				<div class="position-absolute itsTo d-flex align-center">
+					<router-link
+						to="/#skills/Front-End"
+						class="grey--text text--lighten-1 pr-3"
+						>Go right</router-link
+					>
+					<svg
+						width="1em"
+						height="1em"
+						viewBox="0 0 16 16"
+						class="bi bi-arrow-bar-right grey--text"
+						fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"
+						/>
+					</svg>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Front-End">
+				<FrontEnd :charOptions="charOptions" />
+			</div>
+			<div class="slide" data-anchor="Back-End">
+				<BackEnd :charOptions="charOptions" />
+			</div>
+			<div class="slide" data-anchor="SQL-NoSQL">
+				<SQL :charOptions="charOptions" />
+			</div>
+			<div class="slide" data-anchor="Adobe">
+				<Adobe :charOptions="charOptions" />
+			</div>
+			<div class="slide" data-anchor="CMS">
+				<CMS :charOptions="charOptions" />
+			</div>
+			<div class="slide" data-anchor="NoCode-LowCode">
+				<NoCode :charOptions="charOptions" />
+			</div>
+			<div class="slide" data-anchor="Tools">
+				<Tools :charOptions="charOptions" />
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import Chart from "../ActivityGraph/Chart";
-
-import FrontEnd from "../Tabs/FrontEnd";
-import BackEnd from "../Tabs/BackEnd";
-import SQL from "../Tabs/SQL";
-import Adobe from "../Tabs/Adobe";
-import Tools from "../Tabs/Tools";
-import NoCode from "../Tabs/NoCode";
-import CMS from "../Tabs/CMS";
+import FrontEnd from "./Slide/FrontEnd.vue";
+import BackEnd from "./Slide/BackEnd.vue";
+import SQL from "./Slide/SQL";
+import Adobe from "./Slide/Adobe";
+import Tools from "./Slide/Tools";
+import NoCode from "./Slide/NoCode";
+import CMS from "./Slide/CMS";
 
 export default {
 	components: {
-		Chart,
 		FrontEnd,
 		BackEnd,
 		SQL,
@@ -58,11 +70,6 @@ export default {
 	},
 	data() {
 		return {
-			chartData: [
-				{ name: "HTML5", level: 90 },
-				{ name: "CSS3", level: 90 },
-				{ name: "JavaScript", level: 75 },
-			],
 			charOptions: {
 				responsive: true,
 				maintainAspectRatio: false,
@@ -76,7 +83,7 @@ export default {
 					gridLines: {
 						display: true,
 						circular: true,
-						color: "rgba(255, 255, 255, .5)",
+						color: "rgba(120, 120, 120, .5)",
 						borderDash: [0],
 						borderDashOffset: [0.0],
 						lineWidth: 0.2,
@@ -92,7 +99,7 @@ export default {
 					},
 					pointLabels: {
 						display: true,
-						fontColor: "#fff",
+						fontColor: "#7a7a7a",
 						fontSize: 16,
 					},
 					ticks: {
@@ -119,5 +126,12 @@ export default {
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-bottom: 50px;
+}
+.skill--text-big {
+	font-size: 30px;
+}
+.itsTo {
+	left: 11.5%;
+	bottom: 3%;
 }
 </style>
