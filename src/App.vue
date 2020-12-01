@@ -1,7 +1,6 @@
 <template>
 	<v-app>
 		<v-main>
-			<Menu />
 			<router-view />
 		</v-main>
 	</v-app>
@@ -9,15 +8,8 @@
 
 <script>
 // import Reseau from "./components/Header/Reseau/Reseau";
-import Menu from "./components/Header/Menu/Menu";
 export default {
 	name: "App",
-	components: {
-		Menu,
-	},
-	data: () => ({
-		//
-	}),
 };
 </script>
 
@@ -41,20 +33,23 @@ export default {
 .scopeone {
 	font-family: "Scope One", sans-serif;
 }
-html {
-	/* background: rgba(50,50,58,1); */
-	// background: #fff !important;
-	background: #251b2e !important;
-	background: -moz-linear-gradient(top, #251b2e 0%, #06001e 100%) !important;
-	background: -webkit-linear-gradient(top, #251b2e 0%, #06001e 100%) !important;
-	background: linear-gradient(to bottom, #251b2e 0%, #06001e 100%) !important;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#251b2e', endColorstr='#06001e',GradientType=0 ) !important;
-}
+
 .container {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
 .theme--dark.v-application {
 	background: transparent !important;
+}
+.slide-fade-enter-active {
+	transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+	transform: translateX(10px);
+	opacity: 0;
 }
 </style>

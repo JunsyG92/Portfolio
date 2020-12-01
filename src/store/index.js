@@ -10,10 +10,14 @@ export default new Vuex.Store({
 			{ name: "CSS3", level: 90 },
 			{ name: "JavaScript", level: 75 },
 		],
+		anchor: "",
 	},
 	mutations: {
 		CHANGE_CHART_DATA(state, payload) {
 			state.chart = payload;
+		},
+		CURRENT_ANCHOR(state, payload) {
+			state.anchor = payload;
 		},
 	},
 	actions: {},

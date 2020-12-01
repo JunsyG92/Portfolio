@@ -1,5 +1,5 @@
 <template>
-	<div class="h-100">
+	<div class="h-100" id="section0">
 		<Menu />
 		<v-container class="notfound d-flex justify-center align-center h-100">
 			<v-row>
@@ -7,11 +7,8 @@
 					<div class="mx-auto">
 						<h2 class="_title big _neon _blue">404</h2>
 						<h1 class="_title medium">Page not found.</h1>
-						<router-link
-							to="/"
-							class="d-block text-white item nav-link nav-hover"
-						>
-							<v-btn color="primary" outlined x-large block>
+						<router-link to="/" class="d-block text-white item nav-hover">
+							<v-btn color="grey" outlined x-large block>
 								Go Home
 							</v-btn>
 						</router-link>

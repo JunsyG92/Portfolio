@@ -1,17 +1,21 @@
 <template>
-	<full-page :options="options" id="fullpage">
-		<v-container fluid>
-			<Intro />
-			<About />
-			<Skills />
-			<Work />
-			<Contact />
-		</v-container>
-	</full-page>
+	<div>
+		<Menu />
+		<full-page :options="options" id="fullpage">
+			<v-container fluid>
+				<Intro />
+				<About />
+				<Skills />
+				<Work />
+				<Contact />
+			</v-container>
+		</full-page>
+	</div>
 </template>
 
 <script>
-// import section
+import Menu from "../components/Header/Menu/Menu";
+
 import About from "../components/About/About";
 import Intro from "../components/Intro/Intro";
 import Work from "../components/Work/Work";
@@ -21,6 +25,7 @@ import Skills from "../components/Skills/Skills";
 export default {
 	name: "Home",
 	components: {
+		Menu,
 		About,
 		Intro,
 		Work,
@@ -30,11 +35,23 @@ export default {
 	data() {
 		return {
 			options: {
-				licenseKey: "3936F101-C8A74F32-80C3B0D1-4BA92E67",
 				// menu: "#menu",
 				anchors: ["home", "about", "skills", "work", "contact"],
+				onLeave: this.onLeave,
+				autoScrolling: true,
+				scrollHorizontally: true,
+				controlArrows: false,
+				navigationTooltips: ["firstSlide", "secondSlide", "thirdSlide"],
+				licenseKey: "3936F101-C8A74F32-80C3B0D1-4BA92E67",
+				scrollHorizontallyKey: "012C4ADE-048E489C-82763FBF-C5ACE3DA",
 			},
+			anchor: null,
 		};
+	},
+	methods: {
+		onLeave(origin, destination) {
+			this.$store.commit("CURRENT_ANCHOR", destination.anchor);
+		},
 	},
 };
 </script>
@@ -42,9 +59,5 @@ export default {
 <style lang="scss">
 .v-application .display-4 {
 	font-family: none;
-}
-._neon._blue {
-	text-shadow: 2px 2px 0 #36d8e4, -2px -2px 0 #36d8e4, -2px 2px 0 #36d8e4,
-		2px -2px 0 #36d8e4, 2px 2px 15px #36d8e4, -2px -2px 15px #36d8e4;
 }
 </style>
